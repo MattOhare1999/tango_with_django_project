@@ -24,17 +24,19 @@
 		<strong>There are no categories present.</strong>
 	{% endif %}
 	</div>
-
+	
 	
 	
 	<h2>Most Viewed Pages</h2>
 	<div>
-	{% if mostViewed %}
+	
+	{% if pages %}
+	
 	<ul>
-		{% for Page in mostViewed %}
-			<li>
-				<a href="/rango/category/{{ Page.title}}">{{ Page.name }}</a>
-			</li>
+		{% for page in pages %}
+			
+			<li><a href= "{{page.url}}">{{page.title}}</a></li>
+			
 		{% endfor %}
 	</ul>
 	{% else %}
@@ -42,6 +44,9 @@
 	{% endif %}
 	</div>
 
+	<div>
+		<a href="/rango/add_category/">Add a New Category</a><br />
+	<div/>
 
 	<div>
 		<a href="/rango/about/">About Rango</a><br />
