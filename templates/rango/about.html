@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-
+{% extends 'rango/base.html' %}
 {% load staticfiles %}
 
-<html>
-	<body>
 
+{% block body_block %}
 			This tutorial has been put together by Matthew O'Hare <br />
 			
 		
 	
 			<img src="{{ MEDIA_URL}}cat.jpg"
 				alt="Picture of a Cat" />
-	<div>
-	<a href = "/rango/"> Index Page </a>
-	</div>
 	
-	</body>
-
-</html>
+{% endblock %}
